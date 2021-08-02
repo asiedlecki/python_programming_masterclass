@@ -3,10 +3,7 @@ from datasets import recipe_options
 
 def add_shopping_item(data:dict, item:str, amount:int) -> None:
     """Add a tuple containing 'item' and 'amount' to the 'data' dict."""
-    if item in data:
-        data[item] += amount
-    else:
-        data[item] = amount
+    data[item] = data.setdefault(item, 0) + amount
 
 display_dict = {str(index + 1): meal for index, meal in enumerate(recipes)}
 
