@@ -12,6 +12,15 @@ def simple_hash(s: str) -> int:
     basic_hash = ord(s[0])
     return basic_hash % 10
 
+def get(k: str) -> str:
+    """ Simple hashing function"""
+    hash_code = simple_hash(k)
+    if values[hash_code]:
+        return values[hash_code]
+    else:
+        return None
+
+
 keys = [""] * 10
 values = keys.copy()
 
@@ -24,3 +33,6 @@ for key, value in data:
 
 print(keys)
 print(values)
+print()
+value = get("grape")
+print(value)
