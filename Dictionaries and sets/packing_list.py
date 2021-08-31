@@ -1,3 +1,4 @@
+# example of proper using set.discard()
 travel_mode = {"1": "car", "2": "plane"}
 
 items = {
